@@ -250,7 +250,7 @@
         /* Hero Section */
         .hero {
             height: 85vh;
-            background: linear-gradient(rgba(26, 93, 26, 0.9), rgba(26, 93, 26, 0.95)), url('https://images.unsplash.com/photo-1563241527-3004b7be0ffd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background: linear-gradient(rgba(26, 93, 26, 0.9), rgba(26, 93, 26, 0.95)), url('https://i.postimg.cc/VLZR1f4g/istockphoto_847177752_612x612.jpg');
             background-size: cover;
             background-position: center;
             color: var(--white);
@@ -825,6 +825,33 @@
             resize: vertical;
         }
 
+        /* Floating Cart Button - ADDED FOR YOUR REQUEST */
+        .floating-cart-btn {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .floating-cart-btn:hover {
+            background-color: var(--secondary-green);
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
         /* Responsive Design */
         @media (max-width: 992px) {
             h1 {
@@ -889,6 +916,14 @@
                 font-size: 0.8rem;
                 padding: 8px 0;
             }
+            
+            .floating-cart-btn {
+                bottom: 20px;
+                left: 20px;
+                width: 55px;
+                height: 55px;
+                font-size: 1.6rem;
+            }
         }
 
         @media (max-width: 576px) {
@@ -914,6 +949,14 @@
             
             .stats {
                 grid-template-columns: 1fr;
+            }
+            
+            .floating-cart-btn {
+                bottom: 15px;
+                left: 15px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -1030,7 +1073,7 @@
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-badge">MOST POPULAR</div>
-                    <img src="https://images.unsplash.com/photo-1589923186741-b7d59d6b2c4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="GS-500 Commercial Incubator" class="product-img">
+                    <img src="https://i.postimg.cc/VLZR1f4g/istockphoto_847177752_612x612.jpg" alt="GS-500 Commercial Incubator" class="product-img">
                     <div class="product-content">
                         <h3>GS-500 Commercial Incubator</h3>
                         <p>Perfect for medium-scale poultry businesses. Capacity: 500 eggs with digital precision control.</p>
@@ -1039,16 +1082,13 @@
                             <span class="product-spec">Auto Turning</span>
                             <span class="product-spec">Humidity Control</span>
                         </div>
-                        <div>
-                            <span class="product-old-price">TZS 2,800,000</span>
-                            <span class="product-price">TZS 2,500,000</span>
-                        </div>
-                        <a href="#contact" class="product-link">Order Now <i class="fas fa-arrow-right"></i></a>
+                        <!-- PRICES REMOVED AS REQUESTED -->
+                        <a href="#contact" class="product-link">Inquire Now <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="GS-100 Starter Incubator" class="product-img">
+                    <img src="https://i.postimg.cc/tJX5R7LY/istockphoto_533831550_612x612.jpg" alt="GS-100 Starter Incubator" class="product-img">
                     <div class="product-content">
                         <h3>GS-100 Starter Incubator</h3>
                         <p>Ideal for small farms and beginners. Capacity: 100 eggs with automatic temperature control.</p>
@@ -1057,14 +1097,14 @@
                             <span class="product-spec">Energy Efficient</span>
                             <span class="product-spec">Easy to Use</span>
                         </div>
-                        <div class="product-price">TZS 850,000</div>
-                        <a href="#contact" class="product-link">Order Now <i class="fas fa-arrow-right"></i></a>
+                        <!-- PRICES REMOVED AS REQUESTED -->
+                        <a href="#contact" class="product-link">Inquire Now <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
                 <div class="product-card">
                     <div class="product-badge">BEST VALUE</div>
-                    <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="GS-2000 Pro Incubator" class="product-img">
+                    <img src="https://i.postimg.cc/CMmCHh3X/istockphoto_2172326920_612x612.jpg" alt="GS-2000 Pro Incubator" class="product-img">
                     <div class="product-content">
                         <h3>GS-2000 Pro Incubator</h3>
                         <p>For commercial hatcheries. Capacity: 2000 eggs with full automation and remote monitoring.</p>
@@ -1073,8 +1113,8 @@
                             <span class="product-spec">Remote Monitor</span>
                             <span class="product-spec">Multi-zone Control</span>
                         </div>
-                        <div class="product-price">TZS 8,500,000</div>
-                        <a href="#contact" class="product-link">Order Now <i class="fas fa-arrow-right"></i></a>
+                        <!-- PRICES REMOVED AS REQUESTED -->
+                        <a href="#contact" class="product-link">Inquire Now <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -1372,11 +1412,16 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Gson Engineering and Technologies Ltd. All rights reserved. | Mwanza, Tanzania | VAT No: 123-456-789</p>
+                <p>&copy; 2026 Gson Engineering and Technologies Ltd. All rights reserved. | Mwanza, Tanzania | VAT No: 123-456-789</p>
                 <p style="margin-top: 5px;">Website designed for poultry farmers across Tanzania</p>
             </div>
         </div>
     </footer>
+
+    <!-- Floating Cart Button - ADDED AS REQUESTED -->
+    <button class="floating-cart-btn" id="floatingCartBtn" aria-label="Open shopping cart">
+        <i class="fas fa-shopping-cart"></i>
+    </button>
 
     <!-- Contact Modal -->
     <div class="modal-overlay" id="modalOverlay">
@@ -1472,6 +1517,14 @@
                 modalOverlay.classList.remove('active');
                 document.body.style.overflow = 'auto';
             }
+        });
+        
+        // Floating cart button functionality
+        const floatingCartBtn = document.getElementById('floatingCartBtn');
+        floatingCartBtn.addEventListener('click', () => {
+            // In a real implementation, this would open a cart/shopping modal
+            // For now, we'll redirect to the contact section
+            window.location.href = '#contact';
         });
         
         // Contact Form Submission
