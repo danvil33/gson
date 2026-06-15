@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Gson Engineering & Technologies | Incubator Bora Tanzania | Mwanza</title>
-    <meta name="description" content="Gson Engineering Mwanza - Uzalishaji na uuzaji wa incubators za kisasa kwa mayai 60 hadi 3168. Bei nafuu, delivery mikoa yote, usaidizi wa fundi. Piga 0744983225.">
-    <meta name="keywords" content="incubator bora Tanzania, bei ya incubator Mwanza, mashine ya kuangulie mayai, Gson Engineering, incubator za kisasa, mayai 120 incubator, mayai 528 incubator">
+    <title>Gson Engineering | Incubator Bora Tanzania | Mwanza</title>
+    <meta name="description" content="Gson Engineering Mwanza - Bei za incubators za kisasa: mayai 60 hadi 3168. Free delivery Mwanza, usaidizi wa fundi. Piga 0744983225.">
+    <meta name="keywords" content="incubator bora Tanzania, bei ya incubator, Gson Engineering, mayai incubator, mashine ya kuangua mayai, Mwanza">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -18,33 +18,32 @@
         }
 
         :root {
-            --primary-green: #0a4c0a;
-            --secondary-green: #1e7e34;
+            --primary-green: #0f5c0f;
+            --secondary-green: #218838;
             --accent-orange: #f39c12;
-            --light-beige: #fff7ed;
-            --medium-gray: #f8f9fa;
-            --dark-gray: #2c3e2f;
-            --text-dark: #1e2a1e;
+            --light-beige: #fef9e6;
+            --soft-gray: #f4f6f9;
+            --dark-charcoal: #2d3e2b;
             --white: #ffffff;
-            --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-            --transition: all 0.3s ease;
+            --shadow-sm: 0 8px 20px rgba(0,0,0,0.05);
+            --shadow-md: 0 12px 28px rgba(0,0,0,0.08);
+            --transition: all 0.25s ease;
         }
 
         html { scroll-behavior: smooth; }
         body {
             font-family: 'Open Sans', sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
+            line-height: 1.5;
+            color: #1f2a1b;
             background: var(--white);
         }
-
         h1, h2, h3, h4 {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             color: var(--primary-green);
         }
-        h1 { font-size: 2.8rem; }
+        h1 { font-size: 2.9rem; letter-spacing: -0.5px; }
         h2 { font-size: 2.2rem; text-align: center; margin-bottom: 2rem; position: relative; }
         h2:after {
             content: '';
@@ -52,7 +51,7 @@
             bottom: -12px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
+            width: 90px;
             height: 4px;
             background: var(--accent-orange);
             border-radius: 4px;
@@ -64,57 +63,56 @@
             padding: 0 15px;
         }
         .btn {
-            display: inline-block;
-            padding: 14px 32px;
-            border-radius: 40px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 28px;
+            border-radius: 60px;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 0.95rem;
             transition: var(--transition);
             border: none;
             cursor: pointer;
             font-family: 'Montserrat', sans-serif;
-            text-align: center;
         }
         .btn-primary {
             background: var(--accent-orange);
-            color: var(--white);
-            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            color: white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
         .btn-primary:hover {
             background: #e67e22;
-            transform: translateY(-3px);
+            transform: translateY(-2px);
         }
         .btn-secondary {
             background: transparent;
-            border: 2px solid var(--white);
+            border: 2px solid white;
             color: white;
         }
-        .btn-secondary:hover {
-            background: white;
-            color: var(--primary-green);
-        }
+        .btn-secondary:hover { background: white; color: var(--primary-green); border-color: white; }
         section { padding: 80px 0; }
         .section-light { background: var(--light-beige); }
-        
-        /* announcement */
-        .swahili-banner {
-            background: #0f5c0f;
+        .section-soft { background: var(--soft-gray); }
+
+        /* Top swahili banner */
+        .top-banner {
+            background: #0a3b0a;
             color: #ffefc0;
             padding: 12px 0;
             text-align: center;
-            font-size: 1rem;
             font-weight: 600;
-            letter-spacing: 0.5px;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
         }
-        .swahili-banner i { margin: 0 8px; color: var(--accent-orange); }
-        
+        .top-banner i { margin: 0 6px; color: var(--accent-orange); }
+
         /* header */
         header {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: var(--white);
-            box-shadow: var(--shadow);
+            background: white;
+            box-shadow: var(--shadow-sm);
         }
         .header-container {
             display: flex;
@@ -127,7 +125,7 @@
             align-items: center;
             gap: 12px;
         }
-        .logo-icon i { font-size: 2.2rem; color: var(--primary-green); }
+        .logo-icon i { font-size: 2rem; color: var(--primary-green); }
         .logo-main {
             font-size: 1.5rem;
             font-weight: 800;
@@ -135,9 +133,10 @@
             line-height: 1.2;
         }
         .logo-sub {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 600;
             color: var(--secondary-green);
+            letter-spacing: 0.5px;
         }
         .nav-links {
             display: flex;
@@ -157,39 +156,39 @@
             color: var(--primary-green);
             cursor: pointer;
         }
-        /* hero */
+        /* Hero */
         .hero {
-            background: linear-gradient(rgba(10, 76, 10, 0.88), rgba(10, 76, 10, 0.92)), url('https://i.postimg.cc/VLZR1f4g/istockphoto_847177752_612x612.jpg');
+            background: linear-gradient(105deg, rgba(10, 60, 10, 0.92) 0%, rgba(10, 60, 10, 0.85)), url('https://i.postimg.cc/VLZR1f4g/istockphoto_847177752_612x612.jpg');
             background-size: cover;
-            background-position: center;
+            background-position: center 30%;
             color: white;
-            padding: 90px 0;
+            padding: 100px 0;
             text-align: center;
         }
-        .hero h1 { color: white; font-size: 2.5rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);}
-        .hero p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto; }
-        
+        .hero h1 { color: white; text-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem auto; opacity: 0.95; }
+
         /* product grid */
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-            gap: 35px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
             margin-top: 30px;
         }
         .product-card {
             background: white;
-            border-radius: 20px;
+            border-radius: 24px;
             overflow: hidden;
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-sm);
             transition: var(--transition);
             border: 1px solid #e9ecef;
         }
-        .product-card:hover { transform: translateY(-8px); box-shadow: 0 20px 30px rgba(0,0,0,0.1); }
+        .product-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
         .product-img {
             width: 100%;
-            height: 200px;
+            height: 190px;
             object-fit: cover;
-            background: #e9f5e9;
+            background: #eef2e0;
         }
         .product-content { padding: 20px; }
         .product-price {
@@ -197,353 +196,363 @@
             font-weight: 800;
             color: var(--accent-orange);
             margin: 12px 0;
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 6px;
         }
-        .product-specs { display: flex; flex-wrap: wrap; gap: 8px; margin: 15px 0; }
-        .product-spec {
-            background: #eef2e6;
-            padding: 5px 12px;
-            border-radius: 25px;
+        .price-note {
             font-size: 0.75rem;
+            background: #eef2e6;
+            padding: 4px 12px;
+            border-radius: 30px;
             font-weight: 600;
+        }
+        .product-specs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 12px 0;
+        }
+        .product-spec {
+            background: var(--light-beige);
+            padding: 5px 12px;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-weight: 700;
             color: var(--primary-green);
         }
-        .price-match {
-            background: #ffebcc;
-            padding: 8px;
-            border-radius: 40px;
+        .price-match-badge {
+            background: #ffecd1;
+            padding: 6px;
+            border-radius: 30px;
             font-weight: 700;
+            font-size: 0.75rem;
             text-align: center;
-            margin-top: 12px;
-            font-size: 0.85rem;
+            margin-top: 10px;
+            color: #c0392b;
         }
-        .contact-block {
+        .contact-highlight {
             background: var(--primary-green);
-            border-radius: 24px;
-            padding: 35px;
+            border-radius: 28px;
+            padding: 35px 25px;
             color: white;
             text-align: center;
-            margin: 40px 0;
+            margin: 45px 0 20px;
         }
-        .contact-block h3 { color: white; margin-bottom: 20px; font-size: 1.8rem; }
         .phone-big {
             font-size: 1.8rem;
             font-weight: 800;
-            letter-spacing: 1px;
             background: var(--accent-orange);
             display: inline-block;
-            padding: 8px 25px;
+            padding: 10px 28px;
             border-radius: 60px;
             margin: 10px 0;
+            letter-spacing: 1px;
         }
-        .whatsapp-green { background: #25D366; color: white; padding: 10px 20px; border-radius: 40px; display: inline-flex; align-items: center; gap: 10px; font-weight: bold; margin-top: 15px; transition: 0.2s; }
-        .footer {
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 60px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+        .whatsapp-btn:hover { background: #128C7E; transform: scale(1.02); }
+        .stats-mini {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .stat-circle { text-align: center; }
+        .stat-number { font-size: 2rem; font-weight: 800; color: var(--accent-orange); }
+        footer {
             background: #0a3b0a;
             color: #ddd;
             padding: 50px 0 20px;
         }
-        .floating-contact {
+        .floating-wa {
             position: fixed;
             bottom: 25px;
             right: 25px;
             background: #25D366;
-            width: 60px;
-            height: 60px;
+            width: 58px;
+            height: 58px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.25);
             z-index: 999;
             color: white;
             font-size: 2rem;
             transition: 0.2s;
         }
-        .floating-contact:hover { transform: scale(1.08); background: #128C7E; }
+        .floating-wa:hover { transform: scale(1.07); background: #128C7E; }
+        .modal-overlay {
+            position: fixed;
+            top:0; left:0;
+            width:100%; height:100%;
+            background: rgba(0,0,0,0.75);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity:0;
+            visibility:hidden;
+            transition:0.2s;
+        }
+        .modal-overlay.active { opacity:1; visibility:visible; }
+        .modal {
+            background: white;
+            max-width: 520px;
+            width: 90%;
+            border-radius: 32px;
+            padding: 30px;
+            position: relative;
+        }
+        .form-control {
+            width:100%;
+            padding: 12px 16px;
+            border-radius: 60px;
+            border: 1px solid #ccc;
+            margin-top: 6px;
+        }
         @media (max-width: 768px) {
             .mobile-menu-btn { display: block; }
             .nav-links {
                 position: fixed;
-                top: 85px;
+                top: 75px;
                 left: 0;
                 width: 100%;
                 background: white;
                 flex-direction: column;
                 padding: 30px;
-                gap: 20px;
+                gap: 18px;
                 transform: translateY(-200%);
                 transition: 0.3s;
                 box-shadow: 0 20px 30px rgba(0,0,0,0.1);
-                z-index: 998;
             }
             .nav-links.active { transform: translateY(0); }
-            h1 { font-size: 1.9rem; }
-            .hero h1 { font-size: 1.8rem; }
+            h1 { font-size: 2rem; }
+            .hero { padding: 70px 0; }
             .product-price { font-size: 1.5rem; }
         }
-        .modal-overlay {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0,0,0,0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 2000;
-            opacity: 0;
-            visibility: hidden;
-            transition: 0.25s;
+        .grid-prices {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px,1fr));
+            gap: 16px;
+            margin: 20px 0;
         }
-        .modal-overlay.active { opacity: 1; visibility: visible; }
-        .modal {
+        .price-card {
             background: white;
-            width: 90%;
-            max-width: 500px;
-            border-radius: 28px;
-            padding: 30px;
-            position: relative;
+            border-radius: 20px;
+            padding: 14px;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            font-weight: 700;
         }
-        .form-control {
-            width: 100%;
-            padding: 12px;
-            border-radius: 30px;
-            border: 1px solid #ccc;
-            margin-top: 6px;
-        }
-        .close-modal { position: absolute; top: 15px; right: 20px; font-size: 1.8rem; background: none; border: none; cursor: pointer; }
+        .price-card span { display: block; font-size: 1.3rem; color: var(--accent-orange); }
     </style>
 </head>
 <body>
-    <!-- KARIBU BANNER -->
-    <div class="swahili-banner">
-        <div class="container">
-            <i class="fas fa-egg"></i> KARIBU GSON ENGINEERING & TECHNOLOGIES - UJIPATIE INCUBATOR BORA NA ZA KISASA KABISA <i class="fas fa-check-circle"></i> TUPO MWANZA NA MIKOA YOTE TUNAKUFIKIA
+
+<!-- Top banner: KARIBU -->
+<div class="top-banner">
+    <div class="container">
+        <i class="fas fa-egg"></i> KARIBU GSON ENGINEERING & TECHNOLOGIES &nbsp;|&nbsp; 
+        <i class="fas fa-microchip"></i> UJIPATIE INCUBATOR BORA NA ZA KISASA KABISA &nbsp;|&nbsp;
+        <i class="fas fa-map-marker-alt"></i> TUPO MWANZA NA MIKOA YOTE TUNAKUFIKIA
+    </div>
+</div>
+
+<header id="header">
+    <div class="container header-container">
+        <div class="logo">
+            <div class="logo-icon"><i class="fas fa-industry"></i></div>
+            <div>
+                <div class="logo-main">GSON ENGINEERING</div>
+                <div class="logo-sub">& Technologies Ltd | Incubator Centre</div>
+            </div>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#products">INCUBATORS</a></li>
+            <li><a href="#pricing">BEI ZETU</a></li>
+            <li><a href="#about">HABARI</a></li>
+            <li><a href="#" id="openModalBtn" class="btn btn-primary" style="padding: 6px 20px;">OMBA NUNGUO</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+    <div class="container">
+        <h1><i class="fas fa-egg"></i> Incubator Bora & za Kisasa<br>Tanzania</h1>
+        <p>Bei nafuu kabisa, auto turning, digital control. Tupo Mwanza na tunafika mikoa yote. Engineer Pius anakuandaa kwa mafanikio.</p>
+        <div class="hero-buttons" style="display: flex; gap: 18px; justify-content: center; flex-wrap: wrap;">
+            <a href="#products" class="btn btn-primary"><i class="fas fa-chart-simple"></i> Tazama Incubators</a>
+            <a href="https://wa.me/255744983225?text=KARIBU%20GSON%20ENGINEERING%2C%20Nataka%20kununua%20incubator%20bora" target="_blank" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> WhatsApp 0744983225</a>
         </div>
     </div>
+</section>
 
-    <header id="header">
-        <div class="container header-container">
-            <div class="logo">
-                <div class="logo-icon"><i class="fas fa-microchip"></i></div>
-                <div>
-                    <div class="logo-main">GSON ENGINEERING</div>
-                    <div class="logo-sub">& Technologies Ltd | INCUBATOR BORA</div>
-                </div>
-            </div>
-            <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">NYUMBANI</a></li>
-                <li><a href="#products">INCUBATORS</a></li>
-                <li><a href="#bei">BEI ZETU</a></li>
-                <li><a href="#about">HABARI ZETU</a></li>
-                <li><a href="#" id="openModalBtn" class="btn btn-primary" style="padding: 8px 20px;">OMBA NUNGUO</a></li>
-            </ul>
+<!-- PRODUCTS (all models with exact prices) -->
+<section id="products">
+    <div class="container">
+        <h2><i class="fas fa-microchip"></i> Incubator za Kiotomatiki</h2>
+        <p style="text-align: center; margin-bottom: 20px;">Modeli zote ni AUTO (auto turning + thermostat) - uhakika wa ubora na msaada wa fundi.</p>
+        <div class="products-grid">
+            <!-- 60 -->
+            <div class="product-card"><img src="https://i.postimg.cc/tJX5R7LY/istockphoto_533831550_612x612.jpg" class="product-img"><div class="product-content"><h3>MAYAI 60 AUTO</h3><div class="product-price">TSh 300,000</div><div class="product-specs"><span class="product-spec">Auto turning</span><span class="product-spec">Digital</span></div><div class="price-match-badge"><i class="fas fa-tag"></i> LAKI 3 tu</div></div></div>
+            <!-- 90 -->
+            <div class="product-card"><img src="https://i.postimg.cc/CMmCHh3X/istockphoto_2172326920_612x612.jpg" class="product-img"><div class="product-content"><h3>MAYAI 90 AUTO</h3><div class="product-price">TSh 400,000</div><div class="product-specs"><span class="product-spec">Auto Humidity</span><span class="product-spec">LCD</span></div></div></div>
+            <!-- 120 -->
+            <div class="product-card"><img src="https://i.postimg.cc/VLZR1f4g/istockphoto_847177752_612x612.jpg" class="product-img"><div class="product-content"><h3>MAYAI 120 AUTO</h3><div class="product-price">TSh 450,000</div><div class="product-specs"><span class="product-spec">LAKI 4 na 50</span><span class="product-spec">Kiuchumi</span></div></div></div>
+            <!-- 176 -->
+            <div class="product-card"><img src="https://i.postimg.cc/tJX5R7LY/istockphoto_533831550_612x612.jpg" class="product-img"><div class="product-content"><h3>MAYAI 176 AUTO</h3><div class="product-price">TSh 500,000</div><div class="product-specs"><span class="product-spec">Capacity kubwa</span></div></div></div>
+            <!-- 264 -->
+            <div class="product-card"><img src="https://i.postimg.cc/CMmCHh3X/istockphoto_2172326920_612x612.jpg" class="product-img"><div class="product-content"><h3>MAYAI 264 AUTO</h3><div class="product-price">TSh 700,000</div><div class="product-specs"><span class="product-spec">LAKI 7</span><span class="product-spec">Auto turn</span></div></div></div>
+            <!-- 352 -->
+            <div class="product-card"><img src="https://i.postimg.cc/VLZR1f4g/istockphoto_847177752_612x612.jpg" class="product-img"><div class="product-content"><h3>MAYAI 352 AUTO</h3><div class="product-price">TSh 800,000</div><div class="product-specs"><span class="product-spec">LAKI 8</span><span class="product-spec">Kiwanda kidogo</span></div></div></div>
+            <!-- 528 -->
+            <div class="product-card"><img src="https://i.postimg.cc/tJX5R7LY/istockphoto_533831550_612x612.jpg" class="product-img"><div class="product-content"><h3>MAYAI 528 AUTO</h3><div class="product-price">TSh 1,100,000</div><div class="product-specs"><span class="product-spec">Million 1 Laki 1</span><span class="product-spec">Commercial</span></div></div></div>
+            <!-- 1056 -->
+            <div class="product-card"><img src="https://i.postimg.cc/CMmCHh3X/istockphoto_2172326920_612x612.jpg" class="product-img"><div class="product-content"><h3>MAYAI 1056 AUTO</h3><div class="product-price">TSh 1,400,000</div><div class="product-specs"><span class="product-spec">Million 1 Laki 4</span><span class="product-spec">Full auto</span></div></div></div>
+            <!-- 2112 -->
+            <div class="product-card"><img src="https://i.postimg.cc/VLZR1f4g/istockphoto_847177752_612x612.jpg" class="product-img"><div class="product-content"><h3>MAYAI 2112 AUTO</h3><div class="product-price">TSh 2,300,000</div><div class="product-specs"><span class="product-spec">Million 2 Laki 3</span><span class="product-spec">Industrial</span></div></div></div>
+            <!-- 3168 -->
+            <div class="product-card"><img src="https://i.postimg.cc/tJX5R7LY/istockphoto_533831550_612x612.jpg" class="product-img"><div class="product-content"><h3>MAYAI 3168 AUTO</h3><div class="product-price">TSh 3,000,000</div><div class="product-specs"><span class="product-spec">Million 3</span><span class="product-spec">Ultra capacity</span></div></div></div>
         </div>
-    </header>
-
-    <!-- Hero -->
-    <section class="hero" id="home">
-        <div class="container">
-            <h1>INCUBATOR BORA KWA VIWANGO VYOTE<br> TANZANIA</h1>
-            <p><i class="fas fa-map-marker-alt"></i> Mwanza | Mikoa yote tunakufikia. Incubator za kisasa otomatiki, bei nafuu kabisa, usaidizi wa fundi stadi.</p>
-            <div class="hero-buttons" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="#products" class="btn btn-primary"><i class="fas fa-chart-line"></i> ORODHA YA INCUBATORS</a>
-                <a href="https://wa.me/255744983225?text=KARIBU%20GSON%20ENGINEERING%2C%20Natafuta%20incubator%20bora" class="btn btn-secondary" target="_blank"><i class="fab fa-whatsapp"></i> WHATSAPP 0744983225</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products with exact prices as provided -->
-    <section id="products">
-        <div class="container">
-            <h2>🏆 Incubator za kisasa otomatiki</h2>
-            <p style="text-align: center; margin-bottom: 30px;">Bei zetu zipo chini kabisa, hakuna mbinu, tunatoa price match. Incubators zote ni AUTO (automatic turning & temperature control).</p>
-            <div class="products-grid">
-                <!-- 60 eggs -->
-                <div class="product-card">
-                    <img src="https://i.postimg.cc/tJX5R7LY/istockphoto_533831550_612x612.jpg" alt="incubator mayai 60" class="product-img">
-                    <div class="product-content">
-                        <h3>MAYAI 60 AUTO</h3>
-                        <div class="product-price">TSh 300,000</div>
-                        <div class="product-specs"><span class="product-spec">Auto turning</span><span class="product-spec">Digital</span><span class="product-spec">Kisasa</span></div>
-                        <div class="price-match"><i class="fas fa-tag"></i> Bei nafuu + hakikisho ya ubora</div>
-                    </div>
-                </div>
-                <!-- 90 eggs -->
-                <div class="product-card">
-                    <img src="https://i.postimg.cc/tJX5R7LY/istockphoto_533831550_612x612.jpg" alt="incubator mayai 90" class="product-img">
-                    <div class="product-content"><h3>MAYAI 90 AUTO</h3><div class="product-price">TSh 400,000</div><div class="product-specs"><span class="product-spec">LCD Display</span><span class="product-spec">Low power</span></div></div>
-                </div>
-                <!-- 120 eggs -->
-                <div class="product-card">
-                    <img src="https://i.postimg.cc/CMmCHh3X/istockphoto_2172326920_612x612.jpg" alt="incubator mayai 120" class="product-img">
-                    <div class="product-content"><h3>MAYAI 120 AUTO</h3><div class="product-price">TSh 450,000</div><div class="product-specs"><span class="product-spec">Double insulation</span><span class="product-spec">Auto humid</span></div></div>
-                </div>
-                <!-- 176 eggs -->
-                <div class="product-card"><img src="https://i.postimg.cc/VLZR1f4g/istockphoto_847177752_612x612.jpg" class="product-img"><div class="product-content"><h3>MAYAI 176 AUTO</h3><div class="product-price">TSh 500,000</div><div class="product-specs"><span class="product-spec">Kubwa kidogo</span><span class="product-spec">Kiuchumi</span></div></div></div>
-                <!-- 264 eggs -->
-                <div class="product-card"><img src="https://i.postimg.cc/CMmCHh3X/istockphoto_2172326920_612x612.jpg" class="product-img"><div class="product-content"><h3>MAYAI 264 AUTO</h3><div class="product-price">TSh 700,000</div><div class="product-specs"><span class="product-spec">Shaba motor</span><span class="product-spec">Sturdy</span></div></div></div>
-                <!-- 352 eggs -->
-                <div class="product-card"><img src="https://i.postimg.cc/VLZR1f4g/istockphoto_847177752_612x612.jpg" class="product-img"><div class="product-content"><h3>MAYAI 352 AUTO</h3><div class="product-price">TSh 800,000</div><div class="product-specs"><span class="product-spec">Kiwanda cha kati</span></div></div></div>
-                <!-- 528 eggs -->
-                <div class="product-card"><img src="https://i.postimg.cc/tJX5R7LY/istockphoto_533831550_612x612.jpg" class="product-img"><div class="product-content"><h3>MAYAI 528 AUTO</h3><div class="product-price">TSh 1,100,000</div><div class="product-specs"><span class="product-spec">Commercial</span><span class="product-spec">Million 1 Laki 1</span></div></div></div>
-                <!-- 1056 eggs -->
-                <div class="product-card"><img src="https://i.postimg.cc/CMmCHh3X/istockphoto_2172326920_612x612.jpg" class="product-img"><div class="product-content"><h3>MAYAI 1056 AUTO</h3><div class="product-price">TSh 1,400,000</div><div class="product-specs"><span class="product-spec">Million 1 Laki 4</span></div></div></div>
-                <!-- 2112 eggs -->
-                <div class="product-card"><img src="https://i.postimg.cc/VLZR1f4g/istockphoto_847177752_612x612.jpg" class="product-img"><div class="product-content"><h3>MAYAI 2112 AUTO</h3><div class="product-price">TSh 2,300,000</div><div class="product-specs"><span class="product-spec">Million 2 Laki 3</span></div></div></div>
-                <!-- 3168 eggs -->
-                <div class="product-card"><img src="https://i.postimg.cc/tJX5R7LY/istockphoto_533831550_612x612.jpg" class="product-img"><div class="product-content"><h3>MAYAI 3168 AUTO</h3><div class="product-price">TSh 3,000,000</div><div class="product-specs"><span class="product-spec">Industrial</span><span class="product-spec">Million 3</span></div></div></div>
-            </div>
-            <div class="price-match" style="background: #e0f0e0; margin-top: 40px; font-size: 1rem; padding: 12px; text-align: center;">
-                ⭐ Tuna uhakika wa ubora, Incubators zote zina warranty. Gharama ya usafirishaji inapatikana kwa mikoa yote.
-            </div>
-        </div>
-    </section>
-
-    <!-- Bei table / summary section -->
-    <section id="bei" class="section-light">
-        <div class="container">
-            <h2>✅ ORODHA KAMILI YA BEI (TSH)</h2>
-            <div style="background: white; border-radius: 28px; padding: 20px; box-shadow: var(--shadow);">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px,1fr)); gap: 18px;">
-                    <div><strong>🥚 MAYAI 60 AUTO</strong><br><span style="font-size:1.6rem; color:#e67e22;">300,000</span></div>
-                    <div><strong>🥚 MAYAI 90 AUTO</strong><br><span style="font-size:1.6rem; color:#e67e22;">400,000</span></div>
-                    <div><strong>🥚 MAYAI 120 AUTO</strong><br><span style="font-size:1.6rem; color:#e67e22;">450,000</span></div>
-                    <div><strong>🥚 MAYAI 176 AUTO</strong><br><span style="font-size:1.6rem; color:#e67e22;">500,000</span></div>
-                    <div><strong>🥚 MAYAI 264 AUTO</strong><br><span style="font-size:1.6rem; color:#e67e22;">700,000</span></div>
-                    <div><strong>🥚 MAYAI 352 AUTO</strong><br><span style="font-size:1.6rem; color:#e67e22;">800,000</span></div>
-                    <div><strong>🥚 MAYAI 528 AUTO</strong><br><span style="font-size:1.6rem; color:#e67e22;">1,100,000</span></div>
-                    <div><strong>🥚 MAYAI 1056 AUTO</strong><br><span style="font-size:1.6rem; color:#e67e22;">1,400,000</span></div>
-                    <div><strong>🥚 MAYAI 2112 AUTO</strong><br><span style="font-size:1.6rem; color:#e67e22;">2,300,000</span></div>
-                    <div><strong>🥚 MAYAI 3168 AUTO</strong><br><span style="font-size:1.6rem; color:#e67e22;">3,000,000</span></div>
-                </div>
-                <hr style="margin: 20px 0;">
-                <p><i class="fas fa-truck"></i> <strong>Usafirishaji:</strong> Mwanza delivery bure kwa incubator zote. Mikoa mingine tunapanga usafiri wa haraka kwa gharama nafuu.</p>
-                <p><i class="fas fa-headset"></i> <strong>Huduma za ufungaji na mafunzo:</strong> Tunawasaidia wateja wetu kuanzisha na kutumia incubator kwa ufanisi mkubwa.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About + Contact section -->
-    <section id="about">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px,1fr)); gap: 40px;">
-                <div>
-                    <h2>Kuhusu Gson Engineering</h2>
-                    <p>Gson Engineering & Technologies ni kampuni inayoongoza kwa ubora wa incubators nchini Tanzania. Tupo Mwanza na tunahudumia wafugaji wadogo na wakubwa katika mikoa yote.</p>
-                    <p><i class="fas fa-check-circle" style="color:var(--accent-orange)"></i> Incubator zetu ni za AUTO (automatic turning, temperature control na unyevu).</p>
-                    <p><i class="fas fa-check-circle"></i> Tunakupa usaidizi wa kiufundi kabla na baada ya ununuzi, pamoja na dhamana ya miezi 12.</p>
-                    <p><strong>Engineer Pius</strong> na timu yetu tunakuhakikishia incubator bora kwa bei ya chini.</p>
-                </div>
-                <div style="background: var(--light-beige); padding: 30px; border-radius: 30px;">
-                    <h3><i class="fas fa-phone-alt"></i> Mawasiliano yetu</h3>
-                    <p><strong>Namba ya Ofisini (Kupiga):</strong><br> <span style="font-size: 2rem; font-weight: 800;">0744 983 225</span></p>
-                    <p><strong>WhatsApp:</strong> 0744983225 (Piga au Andika ujumbe)</p>
-                    <p><strong>Engineer Pius:</strong> +255 744 983 225</p>
-                    <a href="https://wa.me/255744983225?text=KARIBU%20GSON%20ENGINEERING%2C%20Nataka%20kununua%20incubator" class="whatsapp-green" target="_blank"><i class="fab fa-whatsapp"></i> Wasiliana nasi WhatsApp</a>
-                    <p style="margin-top: 20px;"><i class="fas fa-map-pin"></i> Tupo Mwanza, Tanzania. Tunapokea wateja kwa ridhaa na maonyesho ya incubators.</p>
-                </div>
-            </div>
-            <div class="contact-block" style="margin-top: 40px;">
-                <h3>📢 UJIPATIE INCUBATOR BORA KWA KASI</h3>
-                <p>Piga au tuma ujumbe kwa <strong>0744 983 225</strong> (Engineer Pius) kupata ushauri wa incubator inayolingana na mahitaji yako. Tunatoa bei nafuu mikoa yote Tanzania.</p>
-                <div class="phone-big"><i class="fas fa-phone"></i> 0744 983 225</div>
-                <p><i class="fab fa-whatsapp"></i> WhatsApp sawa: 0744983225</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Map and assurance -->
-    <footer class="footer">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 30px;">
-                <div>
-                    <h4 style="color:white;">GSON ENGINEERING</h4>
-                    <p>Incubator za kisasa kabisa, 100% auto, uhakika wa kuangulia mayai kwa wingi. Tumekua tukiwawezesha wafugaji Tanzania tangu 2015.</p>
-                </div>
-                <div>
-                    <h4 style="color:white;">Anwani</h4>
-                    <p>Mwanza, Tanzania<br>Ofisi: Jengo la Biashara, karibu na soko kuu.<br>Simu: 0744983225</p>
-                </div>
-                <div>
-                    <h4 style="color:white;">Huduma Zetu</h4>
-                    <ul style="list-style: none;">
-                        <li><i class="fas fa-wrench"></i> Ufungaji na calibration</li>
-                        <li><i class="fas fa-chalkboard-user"></i> Mafunzo ya matumizi</li>
-                        <li><i class="fas fa-truck"></i> Delivery mikoa yote</li>
-                        <li><i class="fas fa-shield-alt"></i> Dhamana ya ubora</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 style="color:white;">Saa za kazi</h4>
-                    <p>Jumatatu - Jumamosi: 7:30 AM - 6:30 PM<br>Jumapili: Kwa miadi</p>
-                    <div style="margin-top: 12px;">
-                        <a href="https://wa.me/255744983225" style="color:#f1c40f;"><i class="fab fa-whatsapp"></i> WhatsApp 0744983225</a>
-                    </div>
-                </div>
-            </div>
-            <hr style="margin: 30px 0 20px; border-color:#2e6b2e;">
-            <p style="text-align: center; font-size: 0.85rem;">&copy; 2026 Gson Engineering and Technologies Ltd - Incubator bora Tanzania | Designer for poultry success | Tupo Mwanza tunakufikia kote</p>
-        </div>
-    </footer>
-
-    <!-- Floating WhatsApp/Call button -->
-    <a href="https://wa.me/255744983225?text=KARIBU%20GSON%20ENGINEERING%2C%20Nataka%20kununua%20incubator" class="floating-contact" target="_blank" style="background:#25D366;"><i class="fab fa-whatsapp"></i></a>
-
-    <!-- Modal for quote request -->
-    <div class="modal-overlay" id="modalOverlay">
-        <div class="modal">
-            <button class="close-modal" id="closeModalBtn"><i class="fas fa-times"></i></button>
-            <h2>Omba Bei & Ushauri</h2>
-            <p>Jaza fomu, tutawasiliana nawe kwa haraka kupitia simu/WhatsApp.</p>
-            <form id="quoteForm">
-                <div class="form-group"><label>Jina Kamili *</label><input type="text" id="name" class="form-control" required></div>
-                <div class="form-group"><label>Nambari ya Simu *</label><input type="tel" id="phone" class="form-control" required placeholder="0744983225"></div>
-                <div class="form-group"><label>Mkoa / Location</label><input type="text" id="location" class="form-control" placeholder="Mwanza, Dar, Arusha .."></div>
-                <div class="form-group"><label>Aina ya Incubator</label>
-                    <select id="model" class="form-control">
-                        <option>Mayai 60 (300,000 TSh)</option><option>Mayai 90 (400k)</option><option>Mayai 120 (450k)</option>
-                        <option>Mayai 176 (500k)</option><option>Mayai 264 (700k)</option><option>Mayai 352 (800k)</option>
-                        <option>Mayai 528 (1.1M)</option><option>Mayai 1056 (1.4M)</option><option>Mayai 2112 (2.3M)</option>
-                        <option>Mayai 3168 (3M)</option><option>Sijui, nahitaji ushauri</option>
-                    </select>
-                </div>
-                <div class="form-group"><label>Ujumbe (hiari)</label><textarea class="form-control" rows="2" placeholder="Weka mahitaji yako..."></textarea></div>
-                <button type="submit" class="btn btn-primary" style="width:100%"><i class="fas fa-paper-plane"></i> Tuma Ombi</button>
-            </form>
-            <p style="margin-top: 16px; text-align:center;">Au piga moja kwa moja: <strong>0744 983 225</strong> (Engineer Pius)</p>
+        <div class="price-match-badge" style="background: #e2f0e2; margin-top: 40px; font-size: 1rem; padding: 12px; text-align: center;">
+            <i class="fas fa-truck-fast"></i> Usafirishaji Mwanza bure | Mikoa mingine tunapanga haraka | Warranty & mafunzo
         </div>
     </div>
+</section>
 
-    <script>
-        const mobileBtn = document.getElementById('mobileMenuBtn');
-        const nav = document.getElementById('navLinks');
-        mobileBtn.addEventListener('click', () => {
-            nav.classList.toggle('active');
-            mobileBtn.innerHTML = nav.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-        });
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => { nav.classList.remove('active'); mobileBtn.innerHTML = '<i class="fas fa-bars"></i>'; });
-        });
-        const modal = document.getElementById('modalOverlay');
-        const openModal = document.getElementById('openModalBtn');
-        const closeModal = document.getElementById('closeModalBtn');
-        openModal.addEventListener('click', (e) => { e.preventDefault(); modal.classList.add('active'); document.body.style.overflow='hidden'; });
-        closeModal.addEventListener('click', () => { modal.classList.remove('active'); document.body.style.overflow='auto'; });
-        modal.addEventListener('click', (e) => { if(e.target === modal) { modal.classList.remove('active'); document.body.style.overflow='auto'; } });
-        const form = document.getElementById('quoteForm');
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            let name = document.getElementById('name').value;
-            alert(`Asante ${name}! Tumeipokea ombi lako. Utapigiwa simu au WhatsApp kwa namba 0744983225 ndani ya saa chache.`);
-            form.reset();
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        });
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if(window.scrollY > 50) header.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
-            else header.style.boxShadow = 'none';
-        });
-    </script>
+<!-- PRICE SUMMARY SECTION (exact list) -->
+<section id="pricing" class="section-light">
+    <div class="container">
+        <h2><i class="fas fa-coins"></i> BEI ZETU KWA KWAZI</h2>
+        <div class="grid-prices">
+            <div class="price-card"><i class="fas fa-egg"></i> MAYAI 60 <span>TSh 300,000</span> LAKI 3</div>
+            <div class="price-card"><i class="fas fa-egg"></i> MAYAI 90 <span>TSh 400,000</span> LAKI 4</div>
+            <div class="price-card"><i class="fas fa-egg"></i> MAYAI 120 <span>TSh 450,000</span> LAKI 4 na 50</div>
+            <div class="price-card"><i class="fas fa-egg"></i> MAYAI 176 <span>TSh 500,000</span> LAKI 5</div>
+            <div class="price-card"><i class="fas fa-egg"></i> MAYAI 264 <span>TSh 700,000</span> LAKI 7</div>
+            <div class="price-card"><i class="fas fa-egg"></i> MAYAI 352 <span>TSh 800,000</span> LAKI 8</div>
+            <div class="price-card"><i class="fas fa-egg"></i> MAYAI 528 <span>TSh 1,100,000</span> Mil.1 Laki1</div>
+            <div class="price-card"><i class="fas fa-egg"></i> MAYAI 1056 <span>TSh 1,400,000</span> Mil.1 Laki4</div>
+            <div class="price-card"><i class="fas fa-egg"></i> MAYAI 2112 <span>TSh 2,300,000</span> Mil.2 Laki3</div>
+            <div class="price-card"><i class="fas fa-egg"></i> MAYAI 3168 <span>TSh 3,000,000</span> Milioni 3</div>
+        </div>
+        <div class="stats-mini">
+            <div class="stat-circle"><div class="stat-number">500+</div><span>Wateja walioridhika</span></div>
+            <div class="stat-circle"><div class="stat-number">8+</div><span>Miaka ya Uzoefu</span></div>
+            <div class="stat-circle"><div class="stat-number">24/7</div><span>Support WhatsApp</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- About & contact + MAWASILIANO -->
+<section id="about">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px,1fr)); gap: 40px;">
+            <div>
+                <h2><i class="fas fa-building"></i> Gson Engineering</h2>
+                <p>Kampuni ya Kitanzania inayojishughulisha na utengenezaji na uuzaji wa incubator bora kabisa. Tunatoa huduma za ufungaji, mafunzo na usaidizi wa kiufundi kila wakati.</p>
+                <p><i class="fas fa-check-circle" style="color:var(--accent-orange)"></i> <strong>Incubator zetu ni za kisasa:</strong> otomatiki kamili, kudhibiti joto, unyevu na kugeuza mayai.</p>
+                <p><i class="fas fa-tools"></i> <strong>Huduma Zetu:</strong> Ufungaji, calibration, mafunzo ya uendeshaji, na usaidizi wa dhamana.</p>
+                <p><i class="fas fa-user-check"></i> <strong>Engineer Pius</strong> - Mtaalamu wa incubators, tayari kukusaidia kufanikiwa.</p>
+            </div>
+            <div style="background: var(--light-beige); border-radius: 30px; padding: 30px;">
+                <h3><i class="fas fa-address-card"></i> MAWASILIANO YETU</h3>
+                <p><i class="fas fa-phone-alt"></i> <strong>Namba ya Ofisini (kupiga):</strong><br><span style="font-size: 1.9rem; font-weight:800;">0744 983 225</span></p>
+                <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> 0744 983 225 (Piga au andika ujumbe)</p>
+                <p><i class="fas fa-user-tie"></i> <strong>ENGINEER PIUS:</strong> +255 744 983 225</p>
+                <p><i class="fas fa-map-pin"></i> <strong>TUPO MWANZA</strong> - Ofisi yetu iko Mwanza, tunahudumia mikoa yote Tanzania.</p>
+                <a href="https://wa.me/255744983225?text=KARIBU%20GSON%20ENGINEERING%2C%20Nahitaji%20incubator%20bora" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp fa-xl"></i> Wasiliana nasi WhatsApp</a>
+                <a href="tel:+255744983225" class="btn btn-primary" style="width:100%; margin-top: 18px; justify-content: center;"><i class="fas fa-phone"></i> Piga Simu: 0744 983 225</a>
+            </div>
+        </div>
+
+        <div class="contact-highlight">
+            <h3 style="color: white;"><i class="fas fa-star-of-life"></i> UJIPATIE INCUBATOR BORA KWA MAELEZO ZAIDI</h3>
+            <p>Piga au Tuma ujumbe kwa Engineer Pius, tunakupa ushauri wa incubator inayolingana na bajeti yako.</p>
+            <div class="phone-big"><i class="fas fa-phone"></i> 0744 983 225</div>
+            <p><i class="fab fa-whatsapp"></i> WhatsApp sawa: 0744983225 | Delivery mikoa yote inapatikana.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 30px;">
+            <div><h4 style="color:white;">GSON ENGINEERING</h4><p>Incubator bora na za kisasa, bei nafuu kabisa Tanzania. Tupo Mwanza kwako.</p></div>
+            <div><h4 style="color:white;">Anwani</h4><p>Mwanza, Tanzania<br>Simu: 0744 983 225<br>WhatsApp: 0744983225</p></div>
+            <div><h4 style="color:white;">Huduma</h4><p><i class="fas fa-check-circle"></i> Free delivery Mwanza<br><i class="fas fa-check-circle"></i> Ufungaji & mafunzo<br><i class="fas fa-check-circle"></i> Dhamana ya miezi 12<br><i class="fas fa-check-circle"></i> Usaidizi wa haraka</p></div>
+        </div>
+        <hr style="margin: 30px 0 20px; border-color:#2e5e2e;">
+        <p style="text-align: center; font-size:0.85rem;">&copy; 2026 Gson Engineering & Technologies Ltd - Incubator Bora Tanzania | Engineer Pius | Tupo Mwanza, tunakufikia kote</p>
+    </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/255744983225?text=KARIBU%20GSON%20ENGINEERING%2C%20Nataka%20kununua%20incubator" class="floating-wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<!-- Modal Quote -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+        <button class="close-modal" id="closeModalBtn" style="position:absolute; top:18px; right:22px; background:none; border:none; font-size:1.8rem;"><i class="fas fa-times"></i></button>
+        <h2>Omba Nunguo / Ushauri</h2>
+        <p>Jaza fomu, tutawasiliana nawe kwa haraka kupitia simu / WhatsApp.</p>
+        <form id="quoteForm">
+            <div class="form-group"><label>Jina Kamili *</label><input type="text" id="name" class="form-control" required></div>
+            <div class="form-group"><label>Namba ya Simu *</label><input type="tel" id="phone" class="form-control" required placeholder="0744983225"></div>
+            <div class="form-group"><label>Mkoa / Location</label><input type="text" id="location" class="form-control" placeholder="Mwanza, Dar, Arusha.."></div>
+            <div class="form-group"><label>Aina ya Incubator</label><select id="model" class="form-control"><option>Mayai 60 (300k)</option><option>Mayai 90 (400k)</option><option>Mayai 120 (450k)</option><option>Mayai 176 (500k)</option><option>Mayai 264 (700k)</option><option>Mayai 352 (800k)</option><option>Mayai 528 (1.1M)</option><option>Mayai 1056 (1.4M)</option><option>Mayai 2112 (2.3M)</option><option>Mayai 3168 (3M)</option><option>Sijui, nahitaji ushauri</option></select></div>
+            <div class="form-group"><label>Ujumbe (hiari)</label><textarea class="form-control" rows="2" placeholder="Weka mahitaji yako..."></textarea></div>
+            <button type="submit" class="btn btn-primary" style="width:100%;"><i class="fas fa-paper-plane"></i> Tuma ombi</button>
+        </form>
+        <p style="margin-top:16px; text-align:center;">Au piga moja kwa moja: <strong>0744 983 225</strong> (Engineer Pius)</p>
+    </div>
+</div>
+
+<script>
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const nav = document.getElementById('navLinks');
+    mobileBtn.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        mobileBtn.innerHTML = nav.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+    document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => { nav.classList.remove('active'); mobileBtn.innerHTML = '<i class="fas fa-bars"></i>'; }));
+    const modal = document.getElementById('modalOverlay');
+    const openModal = document.getElementById('openModalBtn');
+    const closeModal = document.getElementById('closeModalBtn');
+    openModal.addEventListener('click', (e) => { e.preventDefault(); modal.classList.add('active'); document.body.style.overflow = 'hidden'; });
+    closeModal.addEventListener('click', () => { modal.classList.remove('active'); document.body.style.overflow = 'auto'; });
+    modal.addEventListener('click', (e) => { if(e.target === modal) { modal.classList.remove('active'); document.body.style.overflow = 'auto'; } });
+    const form = document.getElementById('quoteForm');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        alert(`Asante ${name}! Tumeipokea ombi lako. Utapigiwa simu au WhatsApp kwa namba 0744983225 ndani ya muda mfupi.`);
+        form.reset();
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    });
+    window.addEventListener('scroll', () => {
+        const header = document.getElementById('header');
+        if(window.scrollY > 40) header.style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)';
+        else header.style.boxShadow = 'none';
+    });
+</script>
 </body>
 </html>
